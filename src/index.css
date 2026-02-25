@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+:root {
+  --font-heading: 'Radio Canada Big', sans-serif;
+  --font-body: 'Raveo', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Raveo';
+  src: url('/fonts/raveo/Raveo-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raveo';
+  src: url('/fonts/raveo/Raveo-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Radio Canada Big', sans-serif;
+}
+
+p, span {
+  font-family: var(--font-body);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+/*
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
