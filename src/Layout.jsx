@@ -1,15 +1,22 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/ui/Navbar";
+import { useLocation } from "react-router-dom";
+import NavbarHome from "./components/ui/NavbarHome";
+import NavbarMain from "./components/ui/NavbarMain";
 import Footer from "./components/ui/Footer";
 import './index.css'
 
-export default function Layout() {
+
+const mainNavRoutes = ['/privacy', '/terms']
+
+export default function Layout({ children }) {
+
+    const { pathname } = useLocation()
+    const useMainNav = mainNavRoutes.includes(pathname)
 
     return (
         <div className="max-w-screen">
-            <Navbar />
+            {useMainNav ? <NavbarMain /> : <NavbarHome />}
             <main>
-                <Outlet />
+                {children}
             </main>
             <Footer />
         </div>

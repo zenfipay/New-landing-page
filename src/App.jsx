@@ -9,13 +9,13 @@ import TermsOfService from './pages/TermsOfService'
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
+      <Layout>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
-        </Route>
-      </Routes>
+        </Routes>
+      </Layout>
     </BrowserRouter>
   )
 }
