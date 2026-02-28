@@ -45,7 +45,7 @@ export default function ScrollSnapper({ children }) {
     return (
         <div
             ref={containerRef}
-            className="min-w-full h-screen overflow-y-scroll snap-y snap-mandatory"
+            className=" overflow-y-auto snap-y snap-mandatory"
         >
             {React.Children.map(children, (child, i) => (
                 <div

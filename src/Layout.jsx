@@ -5,7 +5,7 @@ import Footer from "./components/ui/Footer";
 import './index.css'
 
 
-const mainNavRoutes = ['/privacy', '/terms']
+const mainNavRoutes = ['/privacy', '/terms', '/faq']
 
 export default function Layout({ children }) {
 
@@ -13,12 +13,12 @@ export default function Layout({ children }) {
     const useMainNav = mainNavRoutes.includes(pathname)
 
     return (
-        <div className="max-w-screen">
+        <div className="max-w-screen h-screen flex flex-col">
             {useMainNav ? <NavbarMain /> : <NavbarHome />}
-            <main>
+            <main className="flex flex-1 flex-col gap-25">
                 {children}
+                {useMainNav ? <Footer /> : <></>}
             </main>
-            <Footer />
         </div>
     )
 }
